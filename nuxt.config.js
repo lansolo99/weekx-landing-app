@@ -9,8 +9,7 @@ export default {
    */
   head: {
     title: 'Weekx',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -23,18 +22,14 @@ export default {
         content: pkg.description
       }
     ],
-    link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/favicon.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
-    ]
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    } {
+      rel: 'stylesheet',
+      href: 'https://fonts.googleapis.com/css?family=Signika+Negative:300,600'
+    }]
   },
 
   /*
@@ -52,12 +47,26 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['@/plugins/vuetify'],
-
+  // plugins: ['@/plugins/vuetify'],
+  plugins: [
+    '@/plugins/vuetify',
+    {
+      src: '~plugins/vue-parallaxy.js',
+      ssr: false
+    }
+  ],
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: [
+      'assets/style/scss/style.scss',
+      'assets/style/scss/_globals.scss',
+      'assets/style/scss/_mixins.scss',
+      'assets/style/scss/_variables.scss'
+    ]
+  },
 
   /*
    ** Build configuration

@@ -1,7 +1,7 @@
 {
   "name": "weekxlandingpage",
   "version": "1.0.0",
-  "description": "My swell Nuxt.js project",
+  "description": "Weekx landing page",
   "author": "Stephane Changarnier",
   "private": true,
   "scripts": {
@@ -15,26 +15,30 @@
   "dependencies": {
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
+    "vue-parallaxy": "^1.1.1",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
     "@nuxtjs/eslint-config": "^0.0.1",
+    "@nuxtjs/style-resources": "^0.1.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.15.1",
+    "eslint-config-prettier": "^4.1.0",
     "eslint-config-standard": ">=12.0.0",
+    "eslint-loader": "^2.1.2",
     "eslint-plugin-import": ">=2.16.0",
     "eslint-plugin-jest": ">=22.3.0",
     "eslint-plugin-node": ">=8.0.1",
     "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": ">=4.0.1",
     "eslint-plugin-standard": ">=4.0.0",
-    "eslint-loader": "^2.1.2",
     "eslint-plugin-vue": "^5.2.2",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-prettier": "^3.0.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
     "prettier": "^1.16.4",
+    "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   }

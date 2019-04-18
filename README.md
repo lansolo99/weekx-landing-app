@@ -1,10 +1,10 @@
 # weekx
 
-> My swell Nuxt.js project
+> Weekx Landing page
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ npm install
 

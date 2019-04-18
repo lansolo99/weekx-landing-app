@@ -1,0 +1,200 @@
+//
+@font-face {
+	font-family: "iconfont";
+	src: url('~@/assets/fonts/icons/iconfont.eot');
+	src: url('~@/assets/fonts/icons/iconfont.eot?#iefix') format('eot'),
+		url('~@/assets/fonts/icons/iconfont.woff2') format('woff2'),
+		url('~@/assets/fonts/icons/iconfont.woff') format('woff'),
+		url('~@/assets/fonts/icons/iconfont.ttf') format('truetype'),
+		url('~@/assets/fonts/icons/iconfont.svg#iconfont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "iconfont";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	 @if $filename==add {
+			$char: "\E001";
+		}
+
+		 @if $filename==apple-share {
+			$char: "\E002";
+		}
+
+		 @if $filename==arrow_chart {
+			$char: "\E003";
+		}
+
+		 @if $filename==arrow_return {
+			$char: "\E004";
+		}
+
+		 @if $filename==camera {
+			$char: "\E005";
+		}
+
+		 @if $filename==check {
+			$char: "\E006";
+		}
+
+		 @if $filename==checkbox_filled {
+			$char: "\E007";
+		}
+
+		 @if $filename==checkbox_off {
+			$char: "\E008";
+		}
+
+		 @if $filename==checkbox_on {
+			$char: "\E009";
+		}
+
+		 @if $filename==delete {
+			$char: "\E00A";
+		}
+
+		 @if $filename==download {
+			$char: "\E00B";
+		}
+
+		 @if $filename==edit {
+			$char: "\E00C";
+		}
+
+		 @if $filename==eye {
+			$char: "\E00D";
+		}
+
+		 @if $filename==eye_hidden {
+			$char: "\E00E";
+		}
+
+		 @if $filename==profile {
+			$char: "\E00F";
+		}
+
+		 @if $filename==question_mark {
+			$char: "\E010";
+		}
+
+		 @if $filename==reset {
+			$char: "\E011";
+		}
+
+		 @if $filename==stats {
+			$char: "\E012";
+		}
+
+		 @if $filename==trash {
+			$char: "\E013";
+		}
+
+		@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		}
+
+		@else {
+			@include icon-styles;
+		}
+
+		content: icon-char($filename);
+	}
+}
+
+.icon-add {
+		@include icon(add);
+	}
+
+	.icon-apple-share {
+		@include icon(apple-share);
+	}
+
+	.icon-arrow_chart {
+		@include icon(arrow_chart);
+	}
+
+	.icon-arrow_return {
+		@include icon(arrow_return);
+	}
+
+	.icon-camera {
+		@include icon(camera);
+	}
+
+	.icon-check {
+		@include icon(check);
+	}
+
+	.icon-checkbox_filled {
+		@include icon(checkbox_filled);
+	}
+
+	.icon-checkbox_off {
+		@include icon(checkbox_off);
+	}
+
+	.icon-checkbox_on {
+		@include icon(checkbox_on);
+	}
+
+	.icon-delete {
+		@include icon(delete);
+	}
+
+	.icon-download {
+		@include icon(download);
+	}
+
+	.icon-edit {
+		@include icon(edit);
+	}
+
+	.icon-eye {
+		@include icon(eye);
+	}
+
+	.icon-eye_hidden {
+		@include icon(eye_hidden);
+	}
+
+	.icon-profile {
+		@include icon(profile);
+	}
+
+	.icon-question_mark {
+		@include icon(question_mark);
+	}
+
+	.icon-reset {
+		@include icon(reset);
+	}
+
+	.icon-stats {
+		@include icon(stats);
+	}
+
+	.icon-trash {
+		@include icon(trash);
+	}
+
+	

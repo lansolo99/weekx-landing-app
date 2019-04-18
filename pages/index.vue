@@ -1,19 +1,21 @@
 <template>
-  <v-container class="yellow">
-    <v-layout>
-      <v-flex>Test</v-flex>
-    </v-layout>
-  </v-container>
+  <div>
+    <TheHeader />
+    <AppHero />
+    <AppShowcase />
+  </div>
 </template>
 
 <script>
-// import Logo from '~/components/Logo.vue'
-// import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import TheHeader from '@/components/TheHeader.vue'
+import AppHero from '@/components/AppHero.vue'
+import AppShowcase from '@/components/AppShowcase.vue'
 
 export default {
   components: {
-    // Logo,
-    // VuetifyLogo
+    TheHeader,
+    AppHero,
+    AppShowcase
   }
 }
 </script>

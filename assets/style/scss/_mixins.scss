@@ -1,0 +1,103 @@
+//Responsive breakpoints
+
+// @mobileBreakpoint            : 320px; (... ->767)
+// @tabletBreakpoint            : 768px; (... -> 991)
+// @computerBreakpoint          : 992px; (... -> 1299)
+// @largeMonitorBreakpoint      : 1300px; (... -> 1919)
+// @widescreenMonitorBreakpoint : 1920px; (1920 -> ...)
+
+
+@mixin responsive($width) {
+    @if $width==mobile {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $width==tablet {
+        @media only screen and (max-width: 991px) {
+            @content;
+        }
+    }
+
+    @else if $width==computer {
+        @media only screen and (max-width: 1299px) {
+            @content;
+        }
+    }
+
+    @else if $width==largeMonitor {
+        @media only screen and (max-width: 1919px) {
+            @content;
+        }
+    }
+
+    @else if $width==widescreen {
+        @media only screen and (min-width: 1920px) {
+            @content;
+        }
+    }
+}
+
+
+// Small Fab buttons
+@mixin btnFabCustom {
+    .v-btn--small.v-btn--floating {
+        height: 36px;
+        width: 36px;
+
+        .v-icon {
+            &:before {
+                transform: translateY(-50%) translateX(-50%);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        &.help {
+            height: 27px;
+            width: 27px;
+        }
+    }
+}
+
+@mixin strikethrough {
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 0%;
+        height: 1px;
+        background: black;
+        transition: all 0.3s ease-out;
+    }
+
+    &.completed {
+        opacity: 0.5;
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+// Progress bars
+@mixin progress-linear-fill {
+    background-color: $color-green !important;
+    background: repeating-linear-gradient(-45deg,
+        darken($color-green, 0%),
+        darken($color-green, 0%) 2px,
+        darken($color-green, 8%) 4px,
+        darken($color-green, 8%) 4px,
+        );
+    border-radius: 3px;
+}
+
+@mixin progress-linear-background {
+    opacity: 1 !important;
+    background-color: darken(#0a1d38, 2%) !important;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.6);
+}

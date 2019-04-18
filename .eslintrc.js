@@ -18,5 +18,9 @@ module.exports = {
     'prettier'
   ],
   // add your custom rules here
-  rules: {}
+  rules: {
+    // camelcase: ["error", {
+    //   properties: "never"
+    // }]
+  }
 }
