@@ -16,6 +16,31 @@ export default {
     TheHeader,
     AppHero,
     AppShowcase
+  },
+  head() {
+    return {
+      title: 'Weekx',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ],
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico'
+        },
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css?family=Signika+Negative:300,400,500,600'
+        }
+      ]
+    }
   }
 }
 </script>

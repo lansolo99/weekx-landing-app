@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.4.1",
     "cross-env": "^5.2.0",
     "nuxt": "^2.4.0",
     "vue-parallaxy": "^1.1.1",

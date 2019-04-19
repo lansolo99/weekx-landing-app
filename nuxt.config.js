@@ -9,7 +9,8 @@ export default {
    */
   head: {
     title: 'Weekx',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -22,14 +23,18 @@ export default {
         content: pkg.description
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico'
-    } {
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Signika+Negative:300,600'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600'
+      }
+    ]
   },
 
   /*
@@ -58,7 +63,8 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/axios'],
+
   styleResources: {
     scss: [
       'assets/style/scss/style.scss',
@@ -87,6 +93,7 @@ export default {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
+          // test: /\.ogg$/,
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/

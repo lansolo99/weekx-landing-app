@@ -19,8 +19,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    // camelcase: ["error", {
-    //   properties: "never"
-    // }]
+    "semi": [2, "never"],
+    "no-console": "off"
   }
 }
