@@ -3,6 +3,7 @@
     <TheHeader />
     <AppHero />
     <AppShowcase />
+    <AppFeatures />
   </div>
 </template>
 
@@ -10,12 +11,14 @@
 import TheHeader from '@/components/TheHeader.vue'
 import AppHero from '@/components/AppHero.vue'
 import AppShowcase from '@/components/AppShowcase.vue'
+import AppFeatures from '@/components/AppFeatures.vue'
 
 export default {
   components: {
     TheHeader,
     AppHero,
-    AppShowcase
+    AppShowcase,
+    AppFeatures
   },
   head() {
     return {

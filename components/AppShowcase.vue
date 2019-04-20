@@ -29,8 +29,14 @@
           Keep up with a high discipline level everyday!
         </p>
       </div>
+      <div class="appElements__btn-pwa">
+        <a href="http://www.weekx.xyz">
+          <img src="~assets/images/btn-pwa.svg" alt="pwa button" />
+        </a>
+        <p class="appElements__btn-pwa-legend">Best viewed on mobile device</p>
+      </div>
     </div>
-    <div class="sep"></div>
+    <!-- <div class="sep"></div> -->
   </div>
 </template>
 
@@ -64,27 +70,6 @@ export default {
           console.warn('Video playback failed')
         })
     }
-
-    // Local fetch exemple
-    // fetch(require('~/assets/images/screencast.mp4'))
-    //   .then(response => {
-    //     console.warn(response)
-    //     console.log('file ok')
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
-
-    // Basic Fetch exemple
-    // fetch('https://jsonplaceholder.typicode.com/todos/1')
-    //   .then(response => {
-    //     response.json().then(posts => {
-    //       console.log(posts)
-    //     })
-    //   })
-    //   .catch(error => {
-    //     console.log(error)
-    //   })
   }
 }
 </script>
@@ -92,6 +77,7 @@ export default {
 <style lang="scss">
 .appShowCase {
   background-color: $color-golden;
+  background-color: purple;
 
   .appElements {
     margin: auto;
@@ -136,6 +122,19 @@ export default {
       margin-top: 50px;
       font-weight: 300;
       font-size: 20px;
+    }
+    &__btn-pwa {
+      a {
+        display: block;
+        margin: auto;
+        width: 190px;
+        padding-top: 40px;
+      }
+      &-legend {
+        font-weight: 300;
+        font-size: 14px;
+        font-style: italic;
+      }
     }
   }
 
