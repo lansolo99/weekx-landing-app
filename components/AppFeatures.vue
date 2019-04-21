@@ -2,8 +2,12 @@
   <section class="appFeatures">
     <v-container>
       <v-layout>
-        <v-flex md4 class="red">
-          <h1>Create your habits</h1>
+        <v-flex md4 class="red pa-4 appFeatures__column">
+          <img
+            src="~assets/images/appFeatures_habits.svg"
+            alt="Create your habits"
+          />
+          <h1 class="">Create your habits</h1>
           <p>
             Set tasks, define a schedule among weekly options (everydays, x
             times a week, specific days or single tasks).
@@ -30,5 +34,21 @@ export default {}
   background-color: $color-golden;
   background-color: green;
   padding-top: 40px;
+
+  &__column {
+    text-align: center;
+    img {
+      width: 70px;
+    }
+
+    h1 {
+      font-size: 25px;
+      font-weight: 500;
+    }
+    p {
+      font-weight: 300;
+      font-size: 18px;
+    }
+  }
 }
 </style>
