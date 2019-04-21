@@ -1,5 +1,5 @@
 <template>
-  <div class="appShowCase">
+  <section class="appShowCase">
     <div class="appElements">
       <h1 class="appElements__title">A simple discipline habits tracker</h1>
       <div class="appElements__phone">
@@ -36,8 +36,7 @@
         <p class="appElements__btn-pwa-legend">Best viewed on mobile device</p>
       </div>
     </div>
-    <!-- <div class="sep"></div> -->
-  </div>
+  </section>
 </template>
 
 <script>
@@ -54,7 +53,6 @@ export default {
     fetchVideoAndPlay()
     // Video fetch
     function fetchVideoAndPlay() {
-      // fetch(require('~/assets/images/screencast.mp4'))
       fetch(require('~/assets/images/screencast.mp4'))
         .then(response => {
           response.blob()
@@ -78,16 +76,16 @@ export default {
 .appShowCase {
   background-color: $color-golden;
   background-color: purple;
+  padding-bottom: 40px;
 
   .appElements {
     margin: auto;
     display: block;
     text-align: center;
     width: 500px;
-    position: absolute;
-    top: 180px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    margin: auto;
+    margin-top: 130px;
 
     &__title {
       font-size: 3.75rem;
@@ -134,13 +132,9 @@ export default {
         font-weight: 300;
         font-size: 14px;
         font-style: italic;
+        margin-bottom: 0;
       }
     }
-  }
-
-  .sep {
-    background-color: $color-golden;
-    height: 1200px;
   }
 }
 </style>

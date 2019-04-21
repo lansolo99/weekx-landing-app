@@ -25,6 +25,12 @@ export default {
 
 <style lang="scss">
 .appHero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 820px;
   background-color: $color-golden;
 
   .Masthead {
@@ -32,7 +38,7 @@ export default {
   }
   .hero {
     position: relative;
-    height: 820px;
+    //height: 820px;
     background-color: $color-golden;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   }
