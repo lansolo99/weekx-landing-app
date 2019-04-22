@@ -1,7 +1,9 @@
 <template>
   <section class="appShowCase">
     <div class="appElements">
-      <h1 class="appElements__title">A simple discipline habits tracker</h1>
+      <h1 class="appElements__title">
+        A simple discipline <br />habits tracker
+      </h1>
       <div class="appElements__phone">
         <img
           src="~assets/images/phone_back.svg"
@@ -87,10 +89,21 @@ export default {
     margin: auto;
     margin-top: 130px;
 
+    @include responsive(mobile) {
+      width: 100%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
     &__title {
       font-size: 3.75rem;
       font-weight: 500;
       line-height: 4.7rem;
+
+      @include responsive(mobile) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
     }
     &__phone {
       position: relative;

@@ -16,7 +16,7 @@
             alt="Create your habits"
           />
           <h1 class="">Create your habits</h1>
-          <p>
+          <p class="appFeatures__column-description">
             Set tasks, define a schedule among weekly options (everydays, x
             times a week, specific days or single tasks).
           </p>
@@ -35,7 +35,7 @@
             alt="Track your progression"
           />
           <h1 class="">Track your progression</h1>
-          <p>
+          <p class="appFeatures__column-description">
             Level-up your commitment to 100% on a 10 weeks range. Completion
             records are also available by-task.
           </p>
@@ -54,7 +54,7 @@
             alt="Set a daily reminder"
           />
           <h1 class="">Set a daily reminder</h1>
-          <p>
+          <p class="appFeatures__column-description">
             Activate notifications for your task(s) due today and choose a time
             that fit your schedule.
           </p>
@@ -86,11 +86,12 @@ export default {}
       font-size: 25px;
       font-weight: 500;
     }
-    p {
+    &-description {
       @include responsive(tablet) {
         padding-left: 4rem;
         padding-right: 4rem;
       }
+      margin: auto;
       margin-top: 20px;
       font-weight: 300;
       font-size: 18px;

@@ -1,24 +1,30 @@
 <template>
   <div>
-    <TheHeader />
+    <AppHeader />
     <AppHero />
     <AppShowcase />
     <AppFeatures />
+    <AppReleases />
+    <AppFooter />
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue'
+import AppHeader from '@/components/AppHeader.vue'
 import AppHero from '@/components/AppHero.vue'
 import AppShowcase from '@/components/AppShowcase.vue'
 import AppFeatures from '@/components/AppFeatures.vue'
+import AppReleases from '@/components/AppReleases.vue'
+import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   components: {
-    TheHeader,
+    AppHeader,
     AppHero,
     AppShowcase,
-    AppFeatures
+    AppFeatures,
+    AppReleases,
+    AppFooter
   },
   head() {
     return {

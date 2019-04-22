@@ -1,5 +1,5 @@
 <template>
-  <div class="appHero">
+  <section class="appHero">
     <div class="hero">
       <no-ssr>
         <parallax :speed-factor="0.3">
@@ -7,7 +7,7 @@
         </parallax>
       </no-ssr>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
