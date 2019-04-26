@@ -3,7 +3,19 @@
     <div class="hero">
       <no-ssr>
         <parallax :speed-factor="0.3">
-          <img src="~assets/images/desktop@2x.jpg" alt="Weekx theme" />
+          <img
+            src="~assets/images/desktop@2x.jpg"
+            srcset="
+              ~assets/images/mobile@2x.jpg   768w,
+              ~assets/images/desktop@2x.jpg 1440w
+            "
+            alt="Weekx theme"
+          />
+          <!-- <img
+            class="appHero__image-desktop"
+            src="~assets/images/desktop@2x.jpg"
+            alt="Weekx theme"
+          /> -->
         </parallax>
       </no-ssr>
     </div>

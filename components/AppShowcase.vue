@@ -90,6 +90,7 @@ export default {
 
     @include responsive(mobile) {
       width: 100%;
+      margin-top: 60px;
       padding-left: 30px;
       padding-right: 30px;
     }
@@ -100,8 +101,8 @@ export default {
       line-height: 4.7rem;
 
       @include responsive(mobile) {
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 2.6rem;
+        line-height: 3rem;
       }
     }
     &__phone {
@@ -110,6 +111,11 @@ export default {
       margin-top: 70px;
       width: 265px;
       height: 541px;
+
+      @include responsive(mobile) {
+        margin-top: 60px;
+      }
+
       video {
         position: relative;
         top: 46px;

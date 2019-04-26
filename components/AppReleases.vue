@@ -6,8 +6,8 @@
           <h1 class="appReleases__title">Releases</h1>
         </v-flex>
       </v-layout>
-      <v-layout>
-        <v-flex xs12 class="appReleases__releasesList">
+      <v-layout justify-center>
+        <v-flex xs9 class="appReleases__releasesList">
           <div
             v-for="release in releases"
             :key="release.date"
@@ -67,6 +67,7 @@ export default {
     font-size: 30px;
     font-weight: 400;
   }
+
   &__releasesList {
     margin-top: 40px;
   }

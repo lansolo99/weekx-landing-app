@@ -12,6 +12,9 @@
             <v-spacer></v-spacer>
             <v-toolbar-items>
               <v-btn flat>Twitter</v-btn>
+              <v-btn href="https://github.com/lansolo99/codex" flat
+                >Github</v-btn
+              >
               <v-btn
                 href="mailto:feedback@weekx.xyz?subject=Feedback%20on%20Weekx"
                 flat
@@ -43,10 +46,27 @@ export default {}
     max-width: 2000px;
     margin: auto;
     position: relative;
+
+    @include responsive(mobile) {
+      .v-toolbar__content {
+        display: block;
+        padding: 20px;
+      }
+    }
+
+    .v-btn {
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
   }
 
   &__logo {
     width: 86px;
+    @include responsive(mobile) {
+      display: block;
+      margin: auto !important;
+    }
   }
 }
 </style>

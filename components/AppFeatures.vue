@@ -7,7 +7,7 @@
           md4
           class="appFeatures__column"
           :class="{
-            'pa-5': $vuetify.breakpoint.smAndDown,
+            'py-4 px-5': $vuetify.breakpoint.smAndDown,
             'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
@@ -26,7 +26,7 @@
           md4
           class="appFeatures__column"
           :class="{
-            'pa-5': $vuetify.breakpoint.smAndDown,
+            'py-4 px-5': $vuetify.breakpoint.smAndDown,
             'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
@@ -45,7 +45,7 @@
           md4
           class="appFeatures__column"
           :class="{
-            'pa-5': $vuetify.breakpoint.smAndDown,
+            'py-4 px-5': $vuetify.breakpoint.smAndDown,
             'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
@@ -88,8 +88,9 @@ export default {}
     }
     &-description {
       @include responsive(tablet) {
-        padding-left: 4rem;
-        padding-right: 4rem;
+        // padding-left: 4rem;
+        // padding-right: 4rem;
+        max-width: 500px;
       }
       margin: auto;
       margin-top: 20px;
