@@ -13,6 +13,7 @@
           src="~assets/images/screencast.mp4"
           width="238"
           height="489"
+          autoplay="1"
           type="video/mp4"
         />
         <img
@@ -21,6 +22,7 @@
         />
       </div>
       <div class="appElements__description">
+        <v-btn @click="playTheVid">launch</v-btn>
         <p>
           Weekx is a weekly task planner web app focused on self-improvement.
           It’s made for people who want to track their discipline commitment.
@@ -35,7 +37,7 @@
         <a href="http://www.weekx.xyz">
           <img src="~assets/images/btn-pwa.svg" alt="pwa button" />
         </a>
-        <p class="appElements__btn-pwa-legend">Best viewed on mobile device</p>
+        <p class="appElements__btn-pwa-legend">Best viewed on mobile devices</p>
       </div>
     </div>
   </section>
@@ -51,24 +53,58 @@ export default {
     // Screencast control
     const media = document.querySelector('video')
     media.loop = true
-    media.load()
-    fetchVideoAndPlay()
-    // Video fetch
-    function fetchVideoAndPlay() {
-      fetch(require('~/assets/images/screencast.mp4'))
-        .then(response => {
-          response.blob()
-        })
-        .then(blob => {
-          media.srcObject = blob
-          return media.play()
-        })
-        .then(_ => {
-          console.warn('video playback started')
-        })
-        .catch(e => {
-          console.warn('Video playback failed')
-        })
+
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        // run code here
+        console.log('loaded')
+        const playPromise = media.play()
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              media.play()
+              console.log('Automatic playback started!')
+            })
+            .catch(error => {
+              // media.play()
+              console.log('Auto-play was prevented')
+              console.log(error)
+            })
+        }
+      }
+    }
+    // window.addEventListener('DOMContentLoaded', function(event) {
+
+    // })
+
+    // media.loop = true
+    // media.load()
+    // fetchVideoAndPlay()
+    // // Video fetch
+    // function fetchVideoAndPlay() {
+    //   fetch(require('~/assets/images/screencast.mp4'))
+    //     .then(response => {
+    //       console.log(response)
+    //       response.blob()
+    //     })
+    //     .then(blob => {
+    //       media.srcObject = blob
+    //       return media.play()
+    //     })
+    //     .then(_ => {
+    //       console.warn('video playback started')
+    //     })
+    //     .catch(e => {
+    //       console.warn(e)
+    //       console.warn('Video playback failed')
+    //     })
+    // }
+  },
+  methods: {
+    playTheVid() {
+      const media = document.querySelector('video')
+      media.loop = true
+      media.play()
     }
   }
 }
@@ -140,11 +176,19 @@ export default {
       font-size: 20px;
     }
     &__btn-pwa {
+      img {
+        transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
       a {
         display: block;
         margin: auto;
         width: 190px;
         padding-top: 40px;
+        img {
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
       &-legend {
         font-weight: 300;

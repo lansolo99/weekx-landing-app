@@ -7,17 +7,17 @@
         </v-flex>
       </v-layout>
       <v-layout justify-center>
-        <v-flex xs9 class="appReleases__releasesList">
+        <v-flex sm10 class="appReleases__releasesList">
           <div
             v-for="release in releases"
             :key="release.date"
             class="release pa-4"
           >
             <v-layout>
-              <v-flex xs13 class="release__title-col">
+              <v-flex xs11 class="release__title-col">
                 <h2>{{ release.title }}</h2>
               </v-flex>
-              <v-flex xs3 class="release__date-col">
+              <v-flex xs5 class="release__date-col">
                 <span>{{ release.date }}</span>
               </v-flex>
             </v-layout>
@@ -60,7 +60,7 @@ export default {
   text-align: center;
   position: relative;
   background-color: $color-blue;
-  padding: 40px 0;
+  padding: 40px 0px 70px;
 
   &__title {
     color: $color-golden;

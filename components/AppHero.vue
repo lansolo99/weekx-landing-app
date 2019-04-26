@@ -11,11 +11,6 @@
             "
             alt="Weekx theme"
           />
-          <!-- <img
-            class="appHero__image-desktop"
-            src="~assets/images/desktop@2x.jpg"
-            alt="Weekx theme"
-          /> -->
         </parallax>
       </no-ssr>
     </div>

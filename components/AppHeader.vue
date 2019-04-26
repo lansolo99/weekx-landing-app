@@ -65,6 +65,7 @@ export default {}
     width: 86px;
     @include responsive(mobile) {
       display: block;
+      width: 105px;
       margin: auto !important;
     }
   }

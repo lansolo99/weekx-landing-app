@@ -72,8 +72,8 @@ export default {}
 .appFeatures {
   position: relative;
   background-color: $color-golden;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
 
   &__column {
     text-align: center;
@@ -84,12 +84,11 @@ export default {}
     h1 {
       margin-top: 10px;
       font-size: 25px;
+      left: 33px;
       font-weight: 500;
     }
     &-description {
       @include responsive(tablet) {
-        // padding-left: 4rem;
-        // padding-right: 4rem;
         max-width: 500px;
       }
       margin: auto;
