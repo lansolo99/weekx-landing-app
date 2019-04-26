@@ -33,6 +33,22 @@ export default {
   height: 820px;
   background-color: $color-golden;
 
+  // Parallaxy
+
+  @media screen and (min-width: 768px) {
+    .Masthead {
+      height: 800px !important;
+      min-height: 0 !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .Masthead {
+      height: 500px !important;
+      min-height: 0 !important;
+    }
+  }
+
   .Masthead {
     z-index: 0;
   }

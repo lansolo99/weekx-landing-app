@@ -77,7 +77,6 @@ export default {
 <style lang="scss">
 .appShowCase {
   background-color: $color-golden;
-  background-color: purple;
   padding-bottom: 40px;
 
   .appElements {
@@ -87,7 +86,7 @@ export default {
     width: 500px;
     position: relative;
     margin: auto;
-    margin-top: 130px;
+    margin-top: 80px;
 
     @include responsive(mobile) {
       width: 100%;
@@ -97,7 +96,7 @@ export default {
 
     &__title {
       font-size: 3.75rem;
-      font-weight: 500;
+      font-weight: 6s00;
       line-height: 4.7rem;
 
       @include responsive(mobile) {

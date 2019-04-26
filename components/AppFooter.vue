@@ -3,8 +3,12 @@
     <v-container class="py-2">
       <v-layout>
         <v-flex xs12>
-          © 2019 Stephane Changarnier -
-          <a href="https://lansolo.io" target="_blank">lansolo.io</a>
+          <span class="appFooter__year">© 2019</span> -
+          <a href="http://fr.linkedin.com/in/stephanechangarnier"
+            >Stephane Changarnier</a
+          >
+          -
+          <a href="https://lansolo.io">lansolo.io</a>
         </v-flex>
       </v-layout>
     </v-container>
@@ -21,5 +25,11 @@ export default {}
   color: white;
   font-size: 14px;
   background-color: $color-matterhorn;
+
+  a,
+  &__year {
+    display: inline-block;
+    margin: 0 10px;
+  }
 }
 </style>

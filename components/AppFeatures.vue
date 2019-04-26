@@ -1,14 +1,14 @@
 <template>
   <section class="appFeatures">
-    <v-container>
+    <v-container class="pt-0">
       <v-layout wrap>
         <v-flex
           sm12
           md4
-          class="red pa-5 appFeatures__column"
+          class="appFeatures__column"
           :class="{
             'pa-5': $vuetify.breakpoint.smAndDown,
-            'pa-2': $vuetify.breakpoint.mdAndUp
+            'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
           <img
@@ -24,10 +24,10 @@
         <v-flex
           sm12
           md4
-          class="red pa-5 appFeatures__column"
+          class="appFeatures__column"
           :class="{
             'pa-5': $vuetify.breakpoint.smAndDown,
-            'pa-2': $vuetify.breakpoint.mdAndUp
+            'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
           <img
@@ -43,10 +43,10 @@
         <v-flex
           sm12
           md4
-          class="red pa-5 appFeatures__column"
+          class="appFeatures__column"
           :class="{
             'pa-5': $vuetify.breakpoint.smAndDown,
-            'pa-2': $vuetify.breakpoint.mdAndUp
+            'py-2 px-5': $vuetify.breakpoint.mdAndUp
           }"
         >
           <img
@@ -72,8 +72,8 @@ export default {}
 .appFeatures {
   position: relative;
   background-color: $color-golden;
-  background-color: green;
   padding-top: 40px;
+  padding-bottom: 40px;
 
   &__column {
     text-align: center;
