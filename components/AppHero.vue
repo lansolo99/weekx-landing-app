@@ -2,7 +2,7 @@
   <section class="appHero">
     <div class="hero">
       <no-ssr>
-        <parallax :speed-factor="0.3">
+        <parallax :speed-factor="0.6">
           <img
             src="~assets/images/desktop@2x.jpg"
             srcset="
@@ -61,7 +61,6 @@ export default {
   }
   .hero {
     position: relative;
-    //height: 820px;
     background-color: $color-golden;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
   }

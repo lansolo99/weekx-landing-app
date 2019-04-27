@@ -18,7 +18,7 @@
               <v-btn
                 href="mailto:feedback@weekx.xyz?subject=Feedback%20on%20Weekx"
                 flat
-                >Insult me</v-btn
+                >Feedbacks</v-btn
               >
             </v-toolbar-items>
           </v-toolbar>
@@ -62,7 +62,7 @@ export default {}
   }
 
   &__logo {
-    width: 86px;
+    width: 115px;
     @include responsive(mobile) {
       display: block;
       width: 105px;

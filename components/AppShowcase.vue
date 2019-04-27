@@ -2,7 +2,7 @@
   <section class="appShowCase">
     <div class="appElements">
       <h1 class="appElements__title">
-        A simple discipline <br />habits tracker
+        Just a simple discipline App
       </h1>
       <div class="appElements__phone">
         <img
@@ -22,7 +22,7 @@
         />
       </div>
       <div class="appElements__description">
-        <v-btn @click="playTheVid">launch</v-btn>
+        <!-- <v-btn @click="playTheVid">launch</v-btn> -->
         <p>
           Weekx is a weekly task planner web app focused on self-improvement.
           It’s made for people who want to track their discipline commitment.
@@ -182,11 +182,11 @@ export default {
       a {
         display: block;
         margin: auto;
-        width: 190px;
+        width: 170px;
         padding-top: 40px;
         img {
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
           }
         }
       }
