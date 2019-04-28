@@ -1,5 +1,8 @@
 <template>
   <div>
+    <transition name="spinner">
+      <AppSpinner v-show="showAppSpinner" />
+    </transition>
     <AppHeader />
     <AppHero />
     <AppShowcase />
@@ -10,6 +13,7 @@
 </template>
 
 <script>
+import AppSpinner from '@/components/AppSpinner.vue'
 import AppHeader from '@/components/AppHeader.vue'
 import AppHero from '@/components/AppHero.vue'
 import AppShowcase from '@/components/AppShowcase.vue'
@@ -19,6 +23,7 @@ import AppFooter from '@/components/AppFooter.vue'
 
 export default {
   components: {
+    AppSpinner,
     AppHeader,
     AppHero,
     AppShowcase,
@@ -28,13 +33,14 @@ export default {
   },
   head() {
     return {
-      title: 'Weekx',
+      title: 'Weekx | Just a simple discipline app',
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
           hid: 'description',
           name: 'description',
-          content: 'My custom description'
+          content:
+            'Weekx is a weekly task planner web app focused on discipline and self-improvement. Try it now!'
         }
       ],
       link: [
@@ -50,6 +56,29 @@ export default {
         }
       ]
     }
+  },
+  data() {
+    return {
+      showAppSpinner: true
+    }
+  },
+  mounted() {
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        this.showAppSpinner = false
+      }
+    }
   }
 }
 </script>
+
+<style lang="scss">
+.spinner-enter-active,
+.spinner-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+.spinner-enter,
+.spinner-leave-to {
+  opacity: 0;
+}
+</style>

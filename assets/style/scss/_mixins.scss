@@ -104,7 +104,7 @@
 
 @mixin textSelection {
   ::selection {
-    background-color: lighten($color-red, 12%);
+    background-color: $color-red;
     color: white;
   }
 

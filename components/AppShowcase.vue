@@ -4,7 +4,11 @@
       <h1 class="appElements__title">
         Just a simple discipline App
       </h1>
-      <div class="appElements__phone">
+      <div
+        class="appElements__phone"
+        :class="{ videoPlay: videoPlay }"
+        @click="playTheVid"
+      >
         <img
           src="~assets/images/phone_back.svg"
           class="appElements__phone-mockup appElements__phone-mockup--back"
@@ -13,16 +17,19 @@
           src="~assets/images/screencast.mp4"
           width="238"
           height="489"
-          autoplay="1"
           type="video/mp4"
         />
+        <div v-if="!videoPlay" class="appElements__beforePlayLayer"></div>
+
         <img
           src="~assets/images/phone_body.svg"
           class="appElements__phone-mockup appElements__phone-mockup--front"
         />
+        <v-btn v-if="!videoPlay" flat class="appElements__beforePlayBtn">
+          <img src="~assets/images/phone_play.svg" />
+        </v-btn>
       </div>
       <div class="appElements__description">
-        <!-- <v-btn @click="playTheVid">launch</v-btn> -->
         <p>
           Weekx is a weekly task planner web app focused on self-improvement.
           It’s made for people who want to track their discipline commitment.
@@ -47,61 +54,16 @@
 export default {
   components: {},
   data() {
-    return {}
-  },
-  mounted() {
-    // Screencast control
-    const media = document.querySelector('video')
-    media.loop = true
-
-    document.onreadystatechange = () => {
-      if (document.readyState === 'complete') {
-        // run code here
-        console.log('loaded')
-        const playPromise = media.play()
-        if (playPromise !== undefined) {
-          playPromise
-            .then(() => {
-              media.play()
-              console.log('Automatic playback started!')
-            })
-            .catch(error => {
-              // media.play()
-              console.log('Auto-play was prevented')
-              console.log(error)
-            })
-        }
-      }
+    return {
+      videoPlay: false
     }
-    // window.addEventListener('DOMContentLoaded', function(event) {
-
-    // })
-
-    // media.loop = true
-    // media.load()
-    // fetchVideoAndPlay()
-    // // Video fetch
-    // function fetchVideoAndPlay() {
-    //   fetch(require('~/assets/images/screencast.mp4'))
-    //     .then(response => {
-    //       console.log(response)
-    //       response.blob()
-    //     })
-    //     .then(blob => {
-    //       media.srcObject = blob
-    //       return media.play()
-    //     })
-    //     .then(_ => {
-    //       console.warn('video playback started')
-    //     })
-    //     .catch(e => {
-    //       console.warn(e)
-    //       console.warn('Video playback failed')
-    //     })
-    // }
   },
   methods: {
     playTheVid() {
+      // Remove beforePlayLayer
+      this.videoPlay = true
+
+      // Play video
       const media = document.querySelector('video')
       media.loop = true
       media.play()
@@ -149,6 +111,17 @@ export default {
       margin-top: 70px;
       width: 265px;
       height: 541px;
+      cursor: pointer;
+
+      &.videoPlay {
+        cursor: default;
+      }
+
+      &:hover {
+        .appElements__beforePlayBtn img {
+          transform: scale(1.1);
+        }
+      }
 
       @include responsive(mobile) {
         margin-top: 60px;
@@ -172,6 +145,34 @@ export default {
         }
       }
     }
+
+    &__beforePlayLayer {
+      background-color: $color-golden;
+      opacity: 0.4;
+      background-blend-mode: lighten;
+      position: absolute;
+      top: 46px;
+      left: 13px;
+      width: 238px;
+      height: 489px;
+    }
+
+    &__beforePlayBtn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      left: calc(50% - 7px);
+
+      &:before {
+        content: none;
+      }
+
+      img {
+        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+        transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+    }
+
     &__description {
       margin-top: 50px;
       font-weight: 300;

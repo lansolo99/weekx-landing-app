@@ -60,7 +60,6 @@ export default {}
       }
 
       &:hover {
-        //background-color: $color-golden-darker;
         background-color: $color-blue;
         color: white;
       }
@@ -68,7 +67,7 @@ export default {}
   }
 
   &__logo {
-    width: 115px;
+    width: 105px;
     @include responsive(mobile) {
       display: block;
       width: 105px;

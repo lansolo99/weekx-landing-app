@@ -31,5 +31,12 @@ export default {}
     display: inline-block;
     margin: 0 10px;
   }
+
+  a {
+    transition: color 0.15s;
+    &:hover {
+      color: white;
+    }
+  }
 }
 </style>
