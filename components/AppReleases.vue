@@ -23,7 +23,11 @@
             </v-layout>
             <v-layout>
               <v-flex xs12 class="release__changelog-col pt-3">
-                <p class="mb-0">{{ release.changelog }}</p>
+                <ul>
+                  <li v-for="item in release.changelog" :key="item.item">
+                    {{ item.item }}
+                  </li>
+                </ul>
               </v-flex>
             </v-layout>
           </div>
@@ -39,15 +43,12 @@ export default {
     return {
       releases: [
         {
-          title: 'v1.0.0-beta.1',
+          title: 'v1.0.0-beta',
           date: '30 apr 2019',
-          changelog:
-            'Content of my first release. Learn how to set presentation through markdown file then.'
-        },
-        {
-          title: 'v0.0.0-alpha.1',
-          date: '01 mar 2019',
-          changelog: 'Content of my very first release.'
+          changelog: [
+            { item: "Added ellipsis to long task's name" },
+            { item: 'Kill all notifications at midnight' }
+          ]
         }
       ]
     }
@@ -97,8 +98,9 @@ export default {
     }
     &__changelog-col {
       font-size: 16px;
-      p {
-        opacity: 0.8;
+      opacity: 0.8;
+      li:not(:first-child) {
+        margin-top: 5px;
       }
     }
     &:before {
