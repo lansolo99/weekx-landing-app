@@ -19,6 +19,16 @@
           height="489"
           type="video/mp4"
         />
+        <div v-if="!videoPlay" class="appElements__beforePlayPreview">
+          <img
+            src="~assets/images/screencast_preview.jpg"
+            srcset="
+              ~assets/images/screencast_preview.jpg    1x,
+              ~assets/images/screencast_preview@2x.jpg 2x
+            "
+            alt="weekx screencast preview"
+          />
+        </div>
         <div v-if="!videoPlay" class="appElements__beforePlayLayer"></div>
 
         <img
@@ -143,6 +153,17 @@ export default {
         &--back {
           filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
         }
+      }
+    }
+
+    &__beforePlayPreview {
+      position: absolute;
+      top: 46px;
+      left: 13px;
+      width: 238px;
+      height: 489px;
+      img {
+        display: block;
       }
     }
 
