@@ -74,6 +74,7 @@ export default {}
   background-color: $color-golden;
   padding-top: 20px;
   padding-bottom: 60px;
+  @include textSelection;
 
   &__column {
     text-align: center;

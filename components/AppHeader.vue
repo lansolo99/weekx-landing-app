@@ -58,6 +58,12 @@ export default {}
       @include responsive(mobile) {
         display: none;
       }
+
+      &:hover {
+        //background-color: $color-golden-darker;
+        background-color: $color-blue;
+        color: white;
+      }
     }
   }
 

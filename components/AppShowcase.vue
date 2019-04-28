@@ -123,6 +123,7 @@ export default {
     position: relative;
     margin: auto;
     margin-top: 80px;
+    @include textSelection;
 
     @include responsive(mobile) {
       width: 100%;
@@ -133,8 +134,9 @@ export default {
 
     &__title {
       font-size: 3.75rem;
-      font-weight: 6s00;
+      font-weight: 600;
       line-height: 4.7rem;
+      @include textSelection;
 
       @include responsive(mobile) {
         font-size: 2.6rem;
@@ -174,6 +176,7 @@ export default {
       margin-top: 50px;
       font-weight: 300;
       font-size: 20px;
+      @include textSelection;
     }
     &__btn-pwa {
       img {
