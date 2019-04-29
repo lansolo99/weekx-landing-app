@@ -44,7 +44,7 @@ export default {}
   &__toolbar {
     max-width: 2000px;
     margin: auto;
-    position: relative;
+    position: relative !important;
 
     @include responsive(mobile) {
       .v-toolbar__content {

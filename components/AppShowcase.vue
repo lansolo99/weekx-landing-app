@@ -35,9 +35,12 @@
           src="~assets/images/phone_body.svg"
           class="appElements__phone-mockup appElements__phone-mockup--front"
         />
-        <v-btn v-if="!videoPlay" flat class="appElements__beforePlayBtn">
-          <img src="~assets/images/phone_play.svg" />
-        </v-btn>
+
+        <img
+          v-if="!videoPlay"
+          class="appElements__beforePlayBtn"
+          src="~assets/images/phone_play.svg"
+        />
       </div>
       <div class="appElements__description">
         <p>
@@ -128,8 +131,9 @@ export default {
       }
 
       &:hover {
-        .appElements__beforePlayBtn img {
-          transform: scale(1.1);
+        .appElements__beforePlayBtn {
+          transform-origin: center;
+          transform: translateY(-50%) translateX(-50%) scale(1.1);
         }
       }
 
@@ -180,18 +184,13 @@ export default {
 
     &__beforePlayBtn {
       position: absolute;
+      width: 67px;
+      height: 67px;
       top: 50%;
       transform: translateY(-50%) translateX(-50%);
-      left: calc(50% - 7px);
-
-      &:before {
-        content: none;
-      }
-
-      img {
-        filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
-        transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
+      left: 50%;
+      filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+      transition: all 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     &__description {
