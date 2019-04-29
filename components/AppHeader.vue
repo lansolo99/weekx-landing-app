@@ -1,6 +1,6 @@
 <template>
   <section class="appHeader">
-    <v-container class="pt-3 pb-0">
+    <v-container class="pt-4 pb-0">
       <v-layout>
         <v-flex>
           <v-toolbar absolute flat class="appHeader__toolbar transparent">
@@ -11,8 +11,7 @@
             />
             <v-spacer></v-spacer>
             <v-toolbar-items>
-              <v-btn flat>Twitter</v-btn>
-              <v-btn href="https://github.com/lansolo99/codex" flat
+              <v-btn href="https://github.com/lansolo99/weekx" flat
                 >Github</v-btn
               >
               <v-btn
