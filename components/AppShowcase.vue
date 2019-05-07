@@ -17,6 +17,10 @@
           src="~assets/images/screencast.mp4"
           width="238"
           height="489"
+          preload
+          playsinline
+          muted
+          loop
           type="video/mp4"
         />
         <div v-if="!videoPlay" class="appElements__beforePlayPreview">
