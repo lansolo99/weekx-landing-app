@@ -15,8 +15,8 @@
         />
         <video
           src="~assets/images/screencast.mp4"
-          width="238"
-          height="489"
+          width="239"
+          height="490"
           preload
           playsinline
           muted
@@ -148,9 +148,13 @@ export default {
       video {
         position: relative;
         top: 46px;
-        left: 0px;
-        width: 238px;
-        height: 489px;
+        // left: 0px;
+        // width: 238px;
+        // height: 489px;
+
+        left: -1px;
+        width: 239px;
+        height: 490px;
       }
       &-mockup {
         display: block;
