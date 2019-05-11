@@ -58,7 +58,7 @@
         </p>
       </div>
       <div class="appElements__btn-pwa">
-        <a href="http://www.weekx.xyz">
+        <a href="http://app.weekx.xyz">
           <img src="~assets/images/btn-pwa.svg" alt="pwa button" />
         </a>
         <p class="appElements__btn-pwa-legend">Best viewed on mobile devices</p>
