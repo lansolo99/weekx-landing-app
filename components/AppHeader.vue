@@ -15,7 +15,8 @@
                 >Github</v-btn
               >
               <v-btn
-                href="mailto:feedback@weekx.xyz?subject=Feedback%20on%20Weekx"
+                href="https://github.com/lansolo99"
+                target="_blank"
                 flat
                 >Feedbacks</v-btn
               >
