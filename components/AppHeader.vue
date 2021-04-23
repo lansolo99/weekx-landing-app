@@ -14,12 +14,7 @@
               <v-btn href="https://github.com/lansolo99/weekx" flat
                 >Github</v-btn
               >
-              <v-btn
-                href="https://github.com/lansolo99"
-                target="_blank"
-                flat
-                >Feedbacks</v-btn
-              >
+              <v-btn href="https://github.com/lansolo99" flat>Feedbacks</v-btn>
             </v-toolbar-items>
           </v-toolbar>
         </v-flex>
