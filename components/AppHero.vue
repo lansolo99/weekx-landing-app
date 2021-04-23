@@ -2,7 +2,7 @@
   <section class="appHero">
     <div class="hero">
       <no-ssr>
-        <parallax :speed-factor="0.6">
+        <Parallax :speed-factor="0.6">
           <img
             src="~assets/images/desktop@2x.jpg"
             srcset="
@@ -11,7 +11,7 @@
             "
             alt="Weekx theme"
           />
-        </parallax>
+        </Parallax>
       </no-ssr>
     </div>
   </section>

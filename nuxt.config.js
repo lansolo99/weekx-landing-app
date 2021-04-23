@@ -14,8 +14,7 @@ export default {
    */
   head: {
     title: 'Weekx',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -28,20 +27,20 @@ export default {
         content: pkg.description
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600'
+        href: 'https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600'
       }
     ]
   },
-
+  router: {
+    base: '/app/'
+  },
   /*
    ** Customize the progress-bar color
    */
